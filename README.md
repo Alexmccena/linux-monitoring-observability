@@ -17,6 +17,7 @@ Portfolio showcase based on my School 21 Linux Monitoring v2.0 project.
 
 ## Architecture
 
+```mermaid
 graph LR
     A["Linux proc and df"] --> B["Custom Bash exporter"]
     B --> C["Metrics file"]
@@ -25,6 +26,7 @@ graph LR
     F["node_exporter port 9100"] --> E
     E --> G["Grafana"]
     H["Prometheus port 9090"] --> E
+```
 
 More detail: [docs/architecture.md](docs/architecture.md)
 
