@@ -17,16 +17,14 @@ Portfolio showcase based on my School 21 Linux Monitoring v2.0 project.
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    A[Linux /proc + df] --> B[Custom Bash exporter]
-    B --> C[/var/www/html/metrics]
-    C --> D[Nginx /metrics]
-    D --> E[Prometheus]
-    F[node_exporter :9100] --> E
-    E --> G[Grafana]
-    H[Prometheus self metrics :9090] --> E
-```
+graph LR
+    A["Linux proc and df"] --> B["Custom Bash exporter"]
+    B --> C["Metrics file"]
+    C --> D["Nginx metrics endpoint"]
+    D --> E["Prometheus"]
+    F["node_exporter port 9100"] --> E
+    E --> G["Grafana"]
+    H["Prometheus port 9090"] --> E
 
 More detail: [docs/architecture.md](docs/architecture.md)
 
